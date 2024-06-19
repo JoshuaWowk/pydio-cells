@@ -1,0 +1,17 @@
+---
+services:
+  pydio-cells:
+    image: lscr.io/linuxserver/pydio-cells:latest
+    container_name: pydio-cells
+    hostname: pydio-cells
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - EXTERNALURL=pydio.hp-ne.us
+      # - SERVER_IP=0.0.0.0 #optional
+    volumes:
+      - /portainer/Files/AppData/Config/pydio-cells/config:/config
+    ports:
+      - 9090:8080
+    restart: unless-stopped
