@@ -3,7 +3,7 @@ services:
   pydio-cells:
     image: lscr.io/linuxserver/pydio-cells:latest
     container_name: pydio-cells
-    hostname: pydio-cells
+    hostname: pydio-cells-01
     environment:
       - PUID=1000
       - PGID=1000
